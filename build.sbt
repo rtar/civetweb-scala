@@ -8,4 +8,9 @@ libraryDependencies ++= Seq(
 // Set to false or remove if you want to show stubs as linking errors
 nativeLinkStubs := true
 
-enablePlugins(ScalaNativePlugin)
+nativeLinkingOptions ++= {
+  val target = s"${baseDirectory.value}/target/native/${nativePlatform.value}/bin"
+  Seq(s"-L$target", "-rpath", target)
+}
+
+enablePlugins(ScalaNativePlugin, JniNative)

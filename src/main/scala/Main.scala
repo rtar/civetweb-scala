@@ -17,7 +17,7 @@ object Main extends SafeApp {
       context <- library.start
       _ <-
         context
-        .setRequestHandler(c"/health/check") { connection =>
+        .setRequestHandler(c"/health") { connection =>
           connection.sendHttpOk(c"text/plain", 2) *>
           connection.printf(c"OK") as 200
         }

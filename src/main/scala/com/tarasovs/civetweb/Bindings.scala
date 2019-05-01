@@ -3,8 +3,9 @@ package com.tarasovs.civetweb
 import scala.scalanative._
 import scala.scalanative.native._
 
-@native.link("civetweb")
-@native.extern
+@link("civetweb")
+@link("dl")
+@extern
 object Bindings {
   type enum_anonymous_0 = native.CUnsignedInt
   object enum_anonymous_0 {
