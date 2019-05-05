@@ -22,8 +22,8 @@ object Main extends SafeApp {
           connection.printf(c"OK") as 200
         }
         .liftM[Codensity]
-      _ <- IO.putStrLn("Press ENTER to stop").liftM[Codensity]
-      _ <- IO.readLn.liftM[Codensity]
+      _ <- IO.putStrLn("Press Ctrl-C to stop").liftM[Codensity]
+      _ <- context.loop.liftM[Codensity]
     } yield ()
 
 

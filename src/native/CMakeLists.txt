@@ -37,3 +37,7 @@ add_library(${PROJECT_NAME} STATIC ${LIB_SRC})
 install(TARGETS ${PROJECT_NAME} ARCHIVE DESTINATION .)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# Set this instead to see symbols in gdb 
+# set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Release)
