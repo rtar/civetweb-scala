@@ -14,6 +14,7 @@ See `Main.scala` as an example on how to use the bindings.
 
 ## Random technical details
 
+* `pthreads` are used to make sure a single Scala Native thread handles mutliple CivetWeb worker threads,
 * Scala Native Bindgen used to generate the low level bindings (https://scala-native.github.io/scala-native-bindgen/).
 * Scalaz is used to wrap them in more useful form.
 * CivetWeb 1.11 is included and will be statically linked (https://github.com/civetweb/civetweb).
