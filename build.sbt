@@ -1,8 +1,8 @@
 scalaVersion := "2.11.12"
 
 libraryDependencies ++= Seq(
-  "org.scalaz" %%% "scalaz-core" % "7.2.28",
-  "org.scalaz" %%% "scalaz-effect" % "7.2.28"
+  "org.scalaz" %%% "scalaz-core" % "7.2.29",
+  "org.scalaz" %%% "scalaz-effect" % "7.2.29"
 )
 
 // Set to false or remove if you want to show stubs as linking errors
